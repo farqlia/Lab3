@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">5dp</dimen>
+    <dimen name="top_header">36dp</dimen>
+    <dimen name="left_header">32dp</dimen>
 </resources>
