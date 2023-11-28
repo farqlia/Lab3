@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/catFragment">
+
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.example.lab3.CatFragment"
+        android:label="fragment_cat"
+        tools:layout="@layout/fragment_cat" >
+        <action
+            android:id="@+id/action_catFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogFragment"
+        android:name="com.example.lab3.DogFragment"
+        android:label="fragment_dog"
+        tools:layout="@layout/fragment_dog" >
+        <action
+            android:id="@+id/action_dogFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/hamsterFragment"
+        android:name="com.example.lab3.HamsterFragment"
+        android:label="fragment_hamster"
+        tools:layout="@layout/fragment_hamster" >
+        <action
+            android:id="@+id/action_hamsterFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.lab3.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

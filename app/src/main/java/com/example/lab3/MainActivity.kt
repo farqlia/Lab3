@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentTransaction
 import com.example.lab3.databinding.ActivityMainBinding
 
 lateinit var mainBinding: ActivityMainBinding
+
 lateinit var catFragment: CatFragment
 lateinit var dogFragment: DogFragment
 lateinit var hamsterFragment: HamsterFragment
@@ -50,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             dogFragment = supportFragmentManager.findFragmentByTag(DOG_TAG) as DogFragment
             catFragment = supportFragmentManager.findFragmentByTag(CAT_TAG) as CatFragment
             hamsterFragment = supportFragmentManager.findFragmentByTag(HAMSTER_TAG) as HamsterFragment
-
         }
 
         val currentFragment = getCurrentFragment()
@@ -70,7 +70,6 @@ class MainActivity : AppCompatActivity() {
                     detachAttach(hamsterFragment)
                 }
             }
-
         }
 
         mainBinding.hamsterButton.setOnClickListener(onFragmentButtonListener)
